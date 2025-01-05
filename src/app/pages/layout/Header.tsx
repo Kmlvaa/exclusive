@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import React from 'react'
-import heart from '../../../assets/heart.png'
-import basket from '../../../assets/shopping-basket.png'
+import heart from 'assets/heart.png'
+import basket from 'assets/shopping-basket.png'
 import Image from 'next/image'
 
 export default function Header() {
   return (
-    <div className='border-b-2 border-gray'>
+    <div className='border-b-2 border-gray fixed w-full bg-white z-50 top-0 left-0'>
         <div className='Sale w-full h-14 bg-black text-white flex flex-row justify-around items-center'>
             <div></div>
             <div>
@@ -26,8 +26,8 @@ export default function Header() {
             </div>
             <div className='flex flex-row items-center justify-around w-1/4'>
                 <input placeholder='What are you looking for?' className='p-2 bg-gray-100 rounded-md'/>
-                <div className='WishList cursor-pointer'><Image src={heart} alt='wishlist' width={20} height={20}/></div>
-                <div className='Basket cursor-pointer'><Image src={basket} alt='basket' width={20} height={20}/></div>
+                <div className='WishList cursor-pointer'><Image src='/assets/heart.png' alt='wishlist' width={20} height={20}/></div>
+                <div className='Basket cursor-pointer'><Image src='/assets/shopping-basket.png' alt='basket' width={20} height={20}/></div>
             </div>
         </div>
     </div>
